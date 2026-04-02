@@ -5,7 +5,3 @@ This repository should hold different tools for my tooling working with AI (Clau
 ## Skills
 
 The `skills` folder contains my custom skills
-
-## Castellan
-
-The `castellan` folder holds the Castellan Tool
