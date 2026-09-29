@@ -53,6 +53,8 @@ For every changed file, check:
 - Missing or inadequate test coverage
 - Readability and needless complexity (simpler equivalent exists?)
 - Consistency with surrounding conventions
+- Comment quality — comments must explain the *why* (intent/rationale), not the *what*; flag comments that merely restate what the code already says, and overly long/verbose narration that adds no value
+- Security info leakage in comments — on security-relevant changes, comments (and test names) must not describe the attack vector, exploit, or vulnerability type
 
 You may read the changed files and their callers to confirm a finding, but
 the diff below is the scope — do not review unrelated code.
