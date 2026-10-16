@@ -97,12 +97,21 @@ Default action for everything in this list is **delete**, not shorten:
 - **Commented-out code** — delete it; git has it. Flag it separately in the
   report so it's an obvious call rather than a silent one.
 - **Anything carrying an issue reference** — per §2.
+- **Copied workaround explanations** — a comment carried over with a fix that
+  was already applied elsewhere (same selector or pattern, same wording). The
+  first commit and the PR keep the why. One copy per codebase at most, and the
+  new copy goes.
+- **Style override narration** — in CSS/SCSS/`<style>` blocks, comments that
+  explain why a selector targets our own class instead of a library's class, or
+  why a padding/margin/z-index rule exists. The rule is the fix. Its why goes in
+  the commit message. Default to no comments in style blocks.
 
 ## 4. Keep these — never cut
 
 - The **why**: a specific non-obvious invariant, ordering constraint, workaround,
   or tradeoff. It names a fact, not a category.
   `// turndown escapes underscores, so redact before it runs`.
+  Exception: copied workarounds and style-override narration from §3 go.
 - **Directives** — `eslint-disable*`, `@ts-expect-error`, `@ts-ignore`,
   `biome-ignore`, `prettier-ignore`, `istanbul ignore`, `c8 ignore`,
   `v8 ignore`, `@vitest-environment`, `#region`, coverage/bundler pragmas.
